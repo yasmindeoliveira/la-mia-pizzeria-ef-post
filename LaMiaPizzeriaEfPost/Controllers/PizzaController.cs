@@ -1,5 +1,4 @@
 ﻿using LaMiaPizzeriaEfPost.Models;
-using LaMiaPizzeriaEfPost.Utils;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Hosting;
 
@@ -9,14 +8,14 @@ namespace LaMiaPizzeriaModel.Controllers
     {
         public IActionResult Index()
         {
-            List<Pizza>pizzas= PizzaData.GetPizzas();
+            List<Pizza> pizzas = new List<Pizza>();
 
             return View("Index", pizzas);
         }
 
         public IActionResult Dettagli(string nome)
         {
-            List<Pizza> pizzas = PizzaData.GetPizzas();
+            List<Pizza> pizzas = new List<Pizza>();
 
             foreach (Pizza pizza in pizzas)
             {
