@@ -8,7 +8,7 @@ namespace LaMiaPizzeriaModel.Controllers
     public class PizzaController : Controller
     {
         public IActionResult Home() 
-        { 
+        {
             return View(); 
         }
         public IActionResult Index()
