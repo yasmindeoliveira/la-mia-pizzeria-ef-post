@@ -103,5 +103,22 @@ namespace LaMiaPizzeriaModel.Controllers
             return RedirectToAction("Index");
         }
 
+        [HttpPost]
+        public IActionResult Remove(string nome)
+        {
+
+            using (PizzaContext db = new PizzaContext())
+            {
+                Pizza pizza = (from p in db.Pizzas
+                               where p.nome == nome
+                               select p).FirstOrDefault();
+
+                db.Remove(pizza);
+                db.SaveChanges();
+            }
+
+            return RedirectToAction("Index");
+        }
+
     }
 }

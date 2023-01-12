@@ -22,7 +22,7 @@ namespace LaMiaPizzeriaEfPost.Models
         public string descrizione { get; set; }
 
         [Required]
-        [Range(1,100)]
+        [Range(70,15000)]
         public double prezzo { get; set; }
 
         public Pizza()
