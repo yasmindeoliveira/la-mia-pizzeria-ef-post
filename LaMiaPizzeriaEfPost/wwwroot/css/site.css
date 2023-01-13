@@ -68,3 +68,9 @@ body {
     border-radius: 10px;
     width: 730px;
 }
+
+
+.bottoni-action{
+    display: flex;
+    justify-content: center;
+}
